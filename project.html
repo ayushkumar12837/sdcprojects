@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Bloom Nursery</title>
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #76c7c0;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #50a3a2;
+            padding: 10px 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav ul li a:hover {
+            color: #fdd835;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        .slide-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .next {
+            right: 10px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 10px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .services, .testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service, .testimonial {
+            width: 30%;
+            padding: 20px;
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #50a3a2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 1em;
+        }
+    </style>5
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Happy Bloom Nursery</h1>
+        <p>Where young minds flourish!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="slide" style="background-image: url('https://images.jdmagicbox.com/v2/comp/bangalore/w6/080pxx80.xx80.140717101308.b5w6/catalogue/v-blooms-international-school-attibele-bangalore-schools-17xs7cvcal.jpg');">
+            <div class="slide-content">
+                <h2>Welcome to Happy Bloom</h2>
+                <p>Helping your child grow and learn with joy.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image:url('https://www.londonkids.co.in/gallery/54493861_nursery-school-blog.jpg');">
+            <div class="slide-content">
+                <h2>Fun Activities</h2>
+                <p>Engaging activities to foster creativity and learning.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image:url('https://i0.wp.com/blogs.helloparent.com/wp-content/uploads/2023/12/preschool-and-elementary-school.jpg?fit=1152%2C648&ssl=1');">
+            <div class="slide-content">
+                <h2>Safe Environment</h2>
+                <p>Providing a nurturing and safe place for your child.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image:url('https://www.lis.ac.in/blogs/wp-content/uploads/2019/01/Nursery-Schools-in-Gurgaon-1.png');">
+            <div class="slide-content">
+                <h2>Learning Together</h2>
+                <p>Building friendships and learning together every day.</p>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>Happy Bloom Nursery provides a nurturing environment where children learn and grow through play-based learning, developing social skills, creativity, and a love for learning.</p>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Play-Based Learning</h3>
+            <p>Fun, interactive play-based learning activities.</p>
+        </div>
+        <div class="service">
+            <h3>Creative Arts</h3>
+            <p>Art and crafts to inspire creativity.</p>
+        </div>
+        <div class="service">
+            <h3>Safe Environment</h3>
+            <p>Secure and caring facilities.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Our child loves Happy Bloom and has learned so much!" - Parent A</p>
+        </div>
+        <div class="testimonial">
+            <p>"The teachers are amazing and truly care about the children." - Parent B</p>
+        </div>
+        <div class="testimonial">
+            <p>"A safe, fun, and creative environment." - Parent C</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@happybloomnursery.com | Phone: (7892819245)</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Happy Bloom Nursery. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+</body>
+</html>
+ 
